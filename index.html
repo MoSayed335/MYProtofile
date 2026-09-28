@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>Mohamed Sayed | Backend .NET Engineer & Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Mohamed Sayed Abdelkader — High-performance Backend .NET Developer specializing in ASP.NET Core, Clean Architecture, REST APIs, CQRS, and Cloud-ready Scalable Systems.">
+  <meta name="keywords" content="Mohamed Sayed, Backend Developer, .NET Developer, ASP.NET Core, C#, Clean Architecture, CQRS, MediatR, Portfolio, Cairo Egypt">
+  <meta name="author" content="Mohamed Sayed Abdelkader">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mohamed Sayed | Backend .NET Developer">
+  <meta property="og:description" content="Explore production backend systems, Clean Architecture solutions, and engineering portfolio of Mohamed Sayed.">
+  <meta property="og:url" content="https://github.com/MoSayed335">
+  <meta property="og:image" content="MYImages/WhatsApp Image 2026-09-27 at 12.50.13 AM.jpeg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for clean aesthetics -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body class="dark-theme">
+  <!-- Interactive Background Canvas -->
+  <canvas id="ambientCanvas" class="ambient-canvas"></canvas>
+  
+  <!-- Glowing Ambient Mesh Blobs -->
+  <div class="blob-wrapper" aria-hidden="true">
+    <div class="glow-blob blob-1"></div>
+    <div class="glow-blob blob-2"></div>
+    <div class="glow-blob blob-3"></div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+
+  <!-- Custom Cursor Glow -->
+  <div id="cursorGlow" class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header id="mainHeader" class="header-nav">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" id="brandLogo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">Mo.Sayed</span>
+        <span class="logo-tag">.NET</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active" data-nav="hero">Home</a></li>
+          <li><a href="#about" class="nav-link" data-nav="about">About</a></li>
+          <li><a href="#projects" class="nav-link" data-nav="projects">Projects</a></li>
+          <li><a href="#certificates" class="nav-link" data-nav="certificates">Certificates</a></li>
+          <li><a href="#education" class="nav-link" data-nav="education">Education</a></li>
+          <li><a href="#resume" class="nav-link" data-nav="resume">Resume</a></li>
+          <li><a href="#contact" class="nav-link" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Nav Items -->
+      <div class="nav-actions">
+        <button id="soundToggleBtn" class="action-icon-btn" title="Toggle UI Sound Effects" aria-label="Toggle UI Sound Effects">
+          <i class="fa-solid fa-volume-xmark" id="soundIcon"></i>
+        </button>
+        <a href="MyCV/Mohamed_Sayed_Backend_Enginnering.pdf" target="_blank" class="nav-cv-btn" id="navCvButton">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span>CV</span>
+        </a>
+        <button id="mobileMenuToggle" class="mobile-toggle-btn" aria-label="Toggle Navigation Menu">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        
+        <!-- Left Content Column -->
+        <div class="hero-content">
+          <div class="hero-badge animate-fade-in">
+            <span class="status-pulse"></span>
+            <span>Available for New Opportunities</span>
+          </div>
+
+          <h1 class="hero-title animate-slide-up">
+            Hi, I'm <span class="gradient-text">Mohamed Sayed</span>
+          </h1>
+
+          <div class="typing-container animate-slide-up delay-1">
+            <span class="typing-prefix">I am a </span>
+            <span id="typingEffect" class="typing-text"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-description animate-slide-up delay-2">
+            Passionate <strong class="highlight-text">Backend .NET Developer</strong> and Computer Science engineer specializing in architecting resilient RESTful APIs, scalable microservices, and enterprise full-stack web applications with <span class="tag-pill">ASP.NET Core</span>, <span class="tag-pill">C#</span>, <span class="tag-pill">Clean Architecture</span>, and <span class="tag-pill">SQL Server</span>.
+          </p>
+
+          <!-- Hero Metrics -->
+          <div class="hero-metrics animate-slide-up delay-3">
+            <div class="metric-item">
+              <span class="metric-number" data-target="6">6+</span>
+              <span class="metric-label">Production Systems</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-number" data-target="34">34+</span>
+              <span class="metric-label">API Endpoints</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-number" data-target="37">37+</span>
+              <span class="metric-label">GitHub Repos</span>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-actions animate-slide-up delay-4">
+            <a href="#projects" class="btn btn-primary" id="heroViewWorkBtn">
+              <span>View My Work</span>
+              <i class="fa-solid fa-arrow-down-long"></i>
+            </a>
+            <a href="MyCV/Mohamed_Sayed_Backend_Enginnering.pdf" target="_blank" download class="btn btn-glass" id="heroDownloadCvBtn">
+              <i class="fa-solid fa-download"></i>
+              <span>Download CV</span>
+            </a>
+            <a href="https://github.com/MoSayed335" target="_blank" rel="noopener noreferrer" class="btn-icon" title="GitHub Profile" id="heroGithubBtn">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/mo7amed-abdelkader" target="_blank" rel="noopener noreferrer" class="btn-icon" title="LinkedIn Profile" id="heroLinkedinBtn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Profile Visual Column with 3D Glass Frame -->
+        <div class="hero-visual animate-fade-in delay-2">
+          <div class="profile-card-3d" id="heroProfileCard">
+            <div class="card-glow-halo"></div>
+            <div class="avatar-glass-frame">
+              <img 
+                src="MYImages/WhatsApp Image 2026-09-27 at 12.50.13 AM.jpeg" 
+                alt="Mohamed Sayed - Backend .NET Developer" 
+                class="hero-profile-img"
+                id="heroProfileImg"
+                loading="eager"
+              >
+              <div class="avatar-gradient-overlay"></div>
+            </div>
+
+            <!-- Floating Glass Badges on Avatar -->
+            <div class="floating-badge badge-top-right">
+              <div class="badge-icon dotnet-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div class="badge-info">
+                <span class="badge-title">.NET 9 / C#</span>
+                <span class="badge-sub">Clean Architecture</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-left">
+              <div class="badge-icon db-icon">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <div class="badge-info">
+                <span class="badge-title">SQL Server</span>
+                <span class="badge-sub">EF Core & LINQ</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-right">
+              <div class="badge-icon sec-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div class="badge-info">
+                <span class="badge-title">JWT & RBAC</span>
+                <span class="badge-sub">Enterprise Security</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll Indicator Wave -->
+      <a href="#about" class="scroll-down-hint" aria-label="Scroll down to About section">
+        <span class="mouse-icon">
+          <span class="mouse-wheel"></span>
+        </span>
+        <span class="hint-text">EXPLORE MORE</span>
+      </a>
+    </section>
+
+    <!-- ==================== ABOUT & HIGHLIGHTS ==================== -->
+    <section id="about" class="section about-section">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <span class="section-tag">ENGINEERING PROFILE</span>
+          <h2 class="section-title">Architecting <span class="gradient-text">Robust Solutions</span></h2>
+          <p class="section-subtitle">A glimpse into my development philosophy, technical background, and real-world backend engineering experience.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Bio Glass Card -->
+          <div class="about-bio-card glass-panel">
+            <div class="panel-header">
+              <div class="header-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">mohamed_sayed.cs</span>
+            </div>
+            <div class="bio-content">
+              <h3>Hello! I'm Mohamed Sayed Abdelkader</h3>
+              <p>
+                A results-driven <strong class="highlight-cyan">Backend .NET Developer</strong> based in Cairo, Egypt. Currently pursuing my Bachelor of Computer Science at Cairo Higher Institute for Engineering, Computer Science and Management (graduating 2027).
+              </p>
+              <p>
+                My passion is crafting high-throughput REST APIs and microservice-friendly backends that adhere strictly to <strong class="highlight-purple">SOLID principles</strong>, <strong class="highlight-purple">Clean Architecture</strong>, and <strong class="highlight-purple">CQRS with MediatR</strong>.
+              </p>
+              <p>
+                From architecting a full-scale <strong>Domestic Services Booking Platform</strong> featuring SignalR live chat, Stripe escrow, and real-time worker tracking, to engineering end-to-end <strong>E-Commerce APIs</strong> with JWT refresh-token rotation, I take pride in building secure, clean, maintainable software.
+              </p>
+
+              <div class="about-quick-info">
+                <div class="info-row">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Cairo, Egypt</span>
+                </div>
+                <div class="info-row">
+                  <i class="fa-solid fa-envelope"></i>
+                  <a href="mailto:mo.sayed2037@gmail.com">mo.sayed2037@gmail.com</a>
+                </div>
+                <div class="info-row">
+                  <i class="fa-solid fa-phone"></i>
+                  <a href="tel:+201029684685">+20 102 968 4685</a>
+                </div>
+                <div class="info-row">
+                  <i class="fa-solid fa-language"></i>
+                  <span>Arabic (Native) | English (Professional)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Cards Matrix -->
+          <div class="about-features-matrix">
+            <div class="feature-card glass-panel">
+              <div class="feature-icon-box cyan-glow">
+                <i class="fa-solid fa-cubes-stacked"></i>
+              </div>
+              <h4>Clean Architecture & SOLID</h4>
+              <p>Modular, testable, and loosely-coupled domain-centric architecture with separated Core, Application, Infrastructure, and API layers.</p>
+            </div>
+
+            <div class="feature-card glass-panel">
+              <div class="feature-icon-box purple-glow">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <h4>High-Performance REST APIs</h4>
+              <p>Engineered over 34+ production endpoints utilizing asynchronous programming, LINQ optimization, caching, and DTO mappings.</p>
+            </div>
+
+            <div class="feature-card glass-panel">
+              <div class="feature-icon-box emerald-glow">
+                <i class="fa-solid fa-lock"></i>
+              </div>
+              <h4>Enterprise Security & RBAC</h4>
+              <p>Role-Based and Policy-Based Authorization, JWT token rotation, OTP verification, password hashing, and OAuth 2.0 integration.</p>
+            </div>
+
+            <div class="feature-card glass-panel">
+              <div class="feature-icon-box blue-glow">
+                <i class="fa-solid fa-credit-card"></i>
+              </div>
+              <h4>Third-Party Integrations</h4>
+              <p>Stripe & PayPal payments with escrow, SignalR real-time messaging, Firebase Cloud Messaging (FCM), and automated PDF generation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Life & Training Highlights Gallery -->
+        <div class="about-gallery-strip">
+          <div class="strip-header">
+            <h4><i class="fa-solid fa-camera"></i> Journey Moments & Achievements</h4>
+            <span class="strip-badge">Click to enlarge</span>
+          </div>
+          <div class="gallery-thumbnails">
+            <div class="gallery-thumb-item" data-img="MYImages/WhatsApp Image 2026-09-27 at 12.50.13 AM (1).jpeg" data-caption="Receiving .NET Backend Diploma from EraaSoft Academy CEO">
+              <img src="MYImages/WhatsApp Image 2026-09-27 at 12.50.13 AM (1).jpeg" alt="Diploma Ceremony with CEO" loading="lazy">
+              <div class="thumb-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="gallery-thumb-item" data-img="MYImages/WhatsApp Image 2026-09-27 at 12.50.12 AM (2).jpeg" data-caption="Graduation cohort celebration with peers and mentors">
+              <img src="MYImages/WhatsApp Image 2026-09-27 at 12.50.12 AM (2).jpeg" alt="Cohort Celebration" loading="lazy">
+              <div class="thumb-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="gallery-thumb-item" data-img="MYImages/WhatsApp Image 2026-09-27 at 12.50.11 AM.jpeg" data-caption="Digitera Program Technical Track Awarding Ceremony">
+              <img src="MYImages/WhatsApp Image 2026-09-27 at 12.50.11 AM.jpeg" alt="Digitera Awarding" loading="lazy">
+              <div class="thumb-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="gallery-thumb-item" data-img="MYImages/WhatsApp Image 2026-09-27 at 12.50.12 AM.jpeg" data-caption="Digitera Certificate of Completion by iCareer & Plan International">
+              <img src="MYImages/WhatsApp Image 2026-09-27 at 12.50.12 AM.jpeg" alt="Digitera Certificate Photo" loading="lazy">
+              <div class="thumb-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== GITHUB PROJECTS SECTION (CRUCIAL) ==================== -->
+    <section id="projects" class="section projects-section">
+      <div class="section-container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">PORTFOLIO WORK</span>
+          <h2 class="section-title">Featured <span class="gradient-text">GitHub Projects</span></h2>
+          <p class="section-subtitle">Real-world applications, enterprise APIs, and architectural patterns from my GitHub profile <a href="https://github.com/MoSayed335" target="_blank" rel="noopener noreferrer" class="link-glow">@MoSayed335</a>.</p>
+        </div>
+
+        <!-- Project Controls: Search & Category Filter -->
+        <div class="projects-controls glass-panel">
+          <div class="filter-tabs" id="projectFilterTabs">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="backend">Backend & Web API</button>
+            <button class="filter-btn" data-filter="fullstack">Full-Stack MVC</button>
+            <button class="filter-btn" data-filter="architecture">Architecture & Patterns</button>
+            <button class="filter-btn" data-filter="mobile">Mobile / Dart</button>
+          </div>
+
+          <div class="project-search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="projectSearchInput" placeholder="Search by title, tech stack (e.g. C#, CQRS, Stripe)..." aria-label="Search projects">
+            <span id="searchResultCount" class="search-count-badge"></span>
+          </div>
+        </div>
+
+        <!-- Projects Grid Container (Dynamic & Interactive) -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Cards will be populated by script.js with rich details & fallback items rendered below -->
+        </div>
+
+        <!-- GitHub Profile Stats Banner -->
+        <div class="github-cta-banner glass-panel">
+          <div class="github-cta-content">
+            <div class="github-icon-big">
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div>
+              <h3>Explore 37+ Public Repositories on GitHub</h3>
+              <p>Browse full source codes, commit history, issue tracking, and architectural diagrams on my GitHub profile.</p>
+            </div>
+          </div>
+          <a href="https://github.com/MoSayed335" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="visitGithubProfileBtn">
+            <span>Visit @MoSayed335</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== CERTIFICATES GALLERY ==================== -->
+    <section id="certificates" class="section certificates-section">
+      <div class="section-container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">CREDENTIALS & HONORS</span>
+          <h2 class="section-title">Certificates & <span class="gradient-text">Diplomas</span></h2>
+          <p class="section-subtitle">Verified professional accreditations and technical diplomas from accredited academies and programs.</p>
+        </div>
+
+        <!-- Interactive 3D Carousel / Masonry Grid -->
+        <div class="certificates-grid">
+          
+          <!-- Certificate 1: EraaSoft Backend .NET -->
+          <div class="certificate-card glass-panel" data-cert-title="Backend (.NET) Diploma — EraaSoft Academy" data-cert-issuer="EraaSoft Academy (Certified by Mostafa Mahfouz, CEO)" data-cert-date="July 25, 2026" data-img="MYCertificant/WhatsApp Image 2026-09-27 at 12.50.13 AM.jpeg">
+            <div class="cert-image-wrapper">
+              <img src="MYCertificant/WhatsApp Image 2026-09-27 at 12.50.13 AM.jpeg" alt="EraaSoft Backend .NET Diploma" loading="lazy">
+              <div class="cert-glass-overlay">
+                <span class="view-cert-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> View High-Res</span>
+              </div>
+              <div class="cert-tag gold-tag"><i class="fa-solid fa-medal"></i> Backend (.NET) Specialist</div>
+            </div>
+            <div class="cert-info">
+              <div class="cert-meta">
+                <span class="cert-issuer"><i class="fa-solid fa-building-columns"></i> EraaSoft Academy</span>
+                <span class="cert-date"><i class="fa-solid fa-calendar-check"></i> 25/07/2026</span>
+              </div>
+              <h3 class="cert-title">Backend (.NET) Development Diploma</h3>
+              <p class="cert-desc">
+                Intensive professional diploma certifying mastery in ASP.NET Core Web API, MVC, C#, Entity Framework Core, SQL Server, Clean Architecture, CQRS, and third-party integrations.
+              </p>
+              <div class="cert-skills">
+                <span class="mini-pill">ASP.NET Core</span>
+                <span class="mini-pill">C#</span>
+                <span class="mini-pill">EF Core</span>
+                <span class="mini-pill">Clean Architecture</span>
+                <span class="mini-pill">SQL Server</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate 2: Digitera Program Technical Track -->
+          <div class="certificate-card glass-panel" data-cert-title="Certificate of Completion — Digitera Program (Technical Track)" data-cert-issuer="iCareer in partnership with Plan International Egypt" data-cert-date="September 2026" data-img="MYCertificant/WhatsApp Image 2026-09-27 at 12.50.12 AM (3).jpeg">
+            <div class="cert-image-wrapper">
+              <img src="MYCertificant/WhatsApp Image 2026-09-27 at 12.50.12 AM (3).jpeg" alt="Digitera Technical Track Certificate" loading="lazy">
+              <div class="cert-glass-overlay">
+                <span class="view-cert-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> View High-Res</span>
+              </div>
+              <div class="cert-tag cyan-tag"><i class="fa-solid fa-award"></i> Digitera Program</div>
+            </div>
+            <div class="cert-info">
+              <div class="cert-meta">
+                <span class="cert-issuer"><i class="fa-solid fa-handshake"></i> iCareer & Plan International</span>
+                <span class="cert-date"><i class="fa-solid fa-calendar-check"></i> September 2026</span>
+              </div>
+              <h3 class="cert-title">Digitera Technical Track Certification</h3>
+              <p class="cert-desc">
+                Organized under the Youth Inclusion and Employment Program (Ready for Tomorrow), backed by the Ministry of Foreign Affairs of Denmark and Danish-Arab Partnership Programme.
+              </p>
+              <div class="cert-skills">
+                <span class="mini-pill">Technical Track</span>
+                <span class="mini-pill">Software Engineering</span>
+                <span class="mini-pill">Professional Skills</span>
+                <span class="mini-pill">Career Readiness</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== EDUCATION SECTION ==================== -->
+    <section id="education" class="section education-section">
+      <div class="section-container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">ACADEMIC FOUNDATION</span>
+          <h2 class="section-title">Educational <span class="gradient-text">Background</span></h2>
+          <p class="section-subtitle">Strong theoretical grounding in Computer Science, algorithms, systems design, and software engineering.</p>
+        </div>
+
+        <div class="education-timeline-wrapper">
+          <div class="timeline-line"></div>
+
+          <!-- Main Degree Timeline Entry -->
+          <div class="timeline-item">
+            <div class="timeline-node">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            
+            <div class="timeline-card glass-panel">
+              <div class="timeline-card-header">
+                <div>
+                  <span class="timeline-period-badge">2023 — 2027 (Expected)</span>
+                  <h3 class="timeline-degree">Bachelor of Computer Science</h3>
+                  <h4 class="timeline-institution">
+                    <i class="fa-solid fa-university"></i>
+                    Cairo Higher Institute for Engineering, Computer Science and Management
+                  </h4>
+                  <p class="timeline-arabic-title">معهد القاهرة العالي للهندسة وعلوم الحاسب والادارة</p>
+                </div>
+                <div class="institution-logo-badge">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+              </div>
+
+              <p class="timeline-desc">
+                Pursuing comprehensive studies in software engineering, computational theory, high-performance database architectures, and distributed systems. Maintaining rigorous project coursework with hands-on implementation.
+              </p>
+
+              <!-- Relevant Coursework Matrix -->
+              <div class="coursework-section">
+                <h5><i class="fa-solid fa-book-open"></i> Key Relevant Coursework:</h5>
+                <div class="coursework-pills">
+                  <span class="course-pill"><i class="fa-solid fa-check"></i> Data Structures & Algorithms</span>
+                  <span class="course-pill"><i class="fa-solid fa-check"></i> Database Management Systems (DBMS)</span>
+                  <span class="course-pill"><i class="fa-solid fa-check"></i> Object-Oriented Programming (OOP)</span>
+                  <span class="course-pill"><i class="fa-solid fa-check"></i> Software Engineering & System Design</span>
+                  <span class="course-pill"><i class="fa-solid fa-check"></i> Operating Systems & Concurrency</span>
+                  <span class="course-pill"><i class="fa-solid fa-check"></i> Computer Networks & Protocols</span>
+                </div>
+              </div>
+
+              <!-- Campus Photos Gallery -->
+              <div class="campus-showcase">
+                <h5><i class="fa-solid fa-images"></i> Campus & Institute Gallery:</h5>
+                <div class="campus-gallery-grid">
+                  <div class="campus-photo-item" data-img="Education/images (2).jpg" data-caption="Cairo Higher Institute — Entrance & Main Courtyard">
+                    <img src="Education/images (2).jpg" alt="Cairo Higher Institute Campus Main" loading="lazy">
+                    <div class="photo-overlay"><i class="fa-solid fa-expand"></i></div>
+                  </div>
+                  <div class="campus-photo-item" data-img="Education/images.jpg" data-caption="Cairo Higher Institute for Engineering, Computer Science and Management">
+                    <img src="Education/images.jpg" alt="Cairo Higher Institute Facade" loading="lazy">
+                    <div class="photo-overlay"><i class="fa-solid fa-expand"></i></div>
+                  </div>
+                  <div class="campus-photo-item" data-img="Education/images (1).jpg" data-caption="Cairo Higher Institute Architectural Facade">
+                    <img src="Education/images (1).jpg" alt="Cairo Higher Institute Architecture" loading="lazy">
+                    <div class="photo-overlay"><i class="fa-solid fa-expand"></i></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Academic Milestone Entry -->
+          <div class="timeline-item">
+            <div class="timeline-node secondary">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            
+            <div class="timeline-card glass-panel">
+              <div class="timeline-card-header">
+                <div>
+                  <span class="timeline-period-badge">Practical Focus</span>
+                  <h3 class="timeline-degree">Computer Science Core Fundamentals</h3>
+                  <h4 class="timeline-institution">
+                    <i class="fa-solid fa-microchip"></i>
+                    Applied Software Development & Problem Solving
+                  </h4>
+                </div>
+              </div>
+              <p class="timeline-desc">
+                Continuous engagement in competitive programming, algorithmic complexity analysis (Big-O optimization), clean code practices, and applying data structures to real-time high-load web systems.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== MY CV / RESUME & EXPERIENCE ==================== -->
+    <section id="resume" class="section resume-section">
+      <div class="section-container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">CAREER & PROFICIENCY</span>
+          <h2 class="section-title">Resume & <span class="gradient-text">Experience</span></h2>
+          <p class="section-subtitle">Summary of professional work experience, technical stack mastery, and downloadable official CV.</p>
+        </div>
+
+        <!-- Prominent Download CV Banner -->
+        <div class="cv-download-banner glass-panel">
+          <div class="cv-banner-left">
+            <div class="pdf-icon-box">
+              <i class="fa-solid fa-file-pdf"></i>
+            </div>
+            <div class="pdf-details">
+              <h3>Mohamed_Sayed_Backend_Enginnering.pdf</h3>
+              <p>Official verified CV including full project descriptions, technical skills, and recommendations.</p>
+              <div class="pdf-meta-tags">
+                <span><i class="fa-solid fa-shield"></i> ATS-Friendly</span>
+                <span><i class="fa-solid fa-circle-check"></i> Up-to-Date (2026)</span>
+                <span><i class="fa-solid fa-file"></i> PDF Format</span>
+              </div>
+            </div>
+          </div>
+          <div class="cv-banner-actions">
+            <a href="MyCV/Mohamed_Sayed_Backend_Enginnering.pdf" target="_blank" download class="btn btn-primary btn-pulse" id="mainDownloadCvBtn">
+              <i class="fa-solid fa-download"></i>
+              <span>Download CV</span>
+            </a>
+            <a href="MyCV/Mohamed_Sayed_Backend_Enginnering.pdf" target="_blank" class="btn btn-glass" id="mainPreviewCvBtn">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <span>Preview in Browser</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="resume-two-column">
+          
+          <!-- Column 1: Professional Experience -->
+          <div class="resume-col">
+            <h3 class="col-title"><i class="fa-solid fa-briefcase"></i> Work Experience</h3>
+            
+            <div class="experience-list">
+              
+              <!-- Role 1 -->
+              <div class="experience-card glass-panel">
+                <div class="exp-badge">Remote Internship</div>
+                <div class="exp-header">
+                  <h4 class="exp-title">Backend Development Intern</h4>
+                  <span class="exp-company">CodeAlpha</span>
+                  <span class="exp-duration"><i class="fa-solid fa-calendar"></i> June 2026</span>
+                </div>
+                <ul class="exp-bullets">
+                  <li>Completed an intensive remote Backend Development Internship applying <strong>ASP.NET Core</strong> and <strong>SQL Server</strong> to real-world tasks.</li>
+                  <li>Practiced structured debugging and manual test-case verification of API endpoints to validate system robustness before deployment.</li>
+                  <li>Engineered several functional modules including Event Registration, Job Board, and Restaurant Management systems.</li>
+                </ul>
+                <div class="exp-tags">
+                  <span>ASP.NET Core</span>
+                  <span>SQL Server</span>
+                  <span>API Testing</span>
+                  <span>Debugging</span>
+                </div>
+              </div>
+
+              <!-- Role 2 -->
+              <div class="experience-card glass-panel">
+                <div class="exp-badge active-badge">Current</div>
+                <div class="exp-header">
+                  <h4 class="exp-title">Independent Backend Developer</h4>
+                  <span class="exp-company">Self-Employed</span>
+                  <span class="exp-duration"><i class="fa-solid fa-calendar"></i> Jan 2025 — Present</span>
+                </div>
+                <ul class="exp-bullets">
+                  <li>Delivered <strong>6+ production-like backend systems</strong> using ASP.NET Core across E-Commerce, Student Management, Exam Systems, and Service Marketplaces.</li>
+                  <li>Engineered <strong>34+ RESTful API endpoints</strong> featuring secure JWT authentication, Refresh Token rotation, and Role-Based Authorization.</li>
+                  <li>Actively developing a large-scale <strong>Domestic Services Booking Platform</strong> featuring SignalR live chat, Stripe escrow, and real-time worker geolocation.</li>
+                </ul>
+                <div class="exp-tags">
+                  <span>C# / .NET 9</span>
+                  <span>Clean Architecture</span>
+                  <span>JWT & RBAC</span>
+                  <span>Stripe Gateway</span>
+                </div>
+              </div>
+
+              <!-- Role 3 -->
+              <div class="experience-card glass-panel">
+                <div class="exp-badge">Specialized Training</div>
+                <div class="exp-header">
+                  <h4 class="exp-title">Backend .NET Trainee</h4>
+                  <span class="exp-company">EraaSoft Academy</span>
+                  <span class="exp-duration"><i class="fa-solid fa-calendar"></i> Jan 2025</span>
+                </div>
+                <ul class="exp-bullets">
+                  <li>Engineered production-like backend applications using ASP.NET Core Web API and SQL Server, delivering 3+ fully functional systems within the training cycle.</li>
+                  <li>Architected RESTful APIs following <strong>Clean Architecture</strong>, <strong>SOLID principles</strong>, and <strong>Repository Pattern</strong> to ensure maintainability.</li>
+                  <li>Mastered Entity Framework Core, LINQ optimization, and secure payment processing.</li>
+                </ul>
+                <div class="exp-tags">
+                  <span>ASP.NET Core Web API</span>
+                  <span>EF Core</span>
+                  <span>SOLID</span>
+                  <span>Repository Pattern</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Column 2: Technical Skills Matrix -->
+          <div class="resume-col">
+            <h3 class="col-title"><i class="fa-solid fa-microchip"></i> Skills & Technologies</h3>
+            
+            <div class="skills-matrix">
+              
+              <!-- Skill Category 1 -->
+              <div class="skill-group glass-panel">
+                <h4><i class="fa-solid fa-code"></i> Languages & Frameworks</h4>
+                <div class="skill-chips">
+                  <div class="skill-chip">C#</div>
+                  <div class="skill-chip">ASP.NET Core Web API</div>
+                  <div class="skill-chip">ASP.NET Core MVC</div>
+                  <div class="skill-chip">.NET 8 / 9</div>
+                  <div class="skill-chip">Dart / Flutter</div>
+                  <div class="skill-chip">HTML5 / CSS3 / JavaScript</div>
+                </div>
+              </div>
+
+              <!-- Skill Category 2 -->
+              <div class="skill-group glass-panel">
+                <h4><i class="fa-solid fa-sitemap"></i> Architecture & Patterns</h4>
+                <div class="skill-chips">
+                  <div class="skill-chip">Clean Architecture</div>
+                  <div class="skill-chip">SOLID Principles</div>
+                  <div class="skill-chip">CQRS & MediatR</div>
+                  <div class="skill-chip">Repository Pattern</div>
+                  <div class="skill-chip">DTO Pattern</div>
+                  <div class="skill-chip">Layered Architecture</div>
+                </div>
+              </div>
+
+              <!-- Skill Category 3 -->
+              <div class="skill-group glass-panel">
+                <h4><i class="fa-solid fa-database"></i> Databases & ORM</h4>
+                <div class="skill-chips">
+                  <div class="skill-chip">Microsoft SQL Server</div>
+                  <div class="skill-chip">Entity Framework Core (EF Core)</div>
+                  <div class="skill-chip">LINQ Queries</div>
+                  <div class="skill-chip">Database Migrations</div>
+                  <div class="skill-chip">Relational Schema Design</div>
+                </div>
+              </div>
+
+              <!-- Skill Category 4 -->
+              <div class="skill-group glass-panel">
+                <h4><i class="fa-solid fa-shield-halved"></i> Security & Authentication</h4>
+                <div class="skill-chips">
+                  <div class="skill-chip">JWT Authentication</div>
+                  <div class="skill-chip">Refresh Token Rotation</div>
+                  <div class="skill-chip">Role-Based Auth (RBAC)</div>
+                  <div class="skill-chip">Policy-Based Authorization</div>
+                  <div class="skill-chip">OTP Email Verification</div>
+                  <div class="skill-chip">OAuth 2.0</div>
+                </div>
+              </div>
+
+              <!-- Skill Category 5 -->
+              <div class="skill-group glass-panel">
+                <h4><i class="fa-solid fa-plug"></i> Integrations & Tools</h4>
+                <div class="skill-chips">
+                  <div class="skill-chip">Stripe Payment Gateway</div>
+                  <div class="skill-chip">SignalR Real-Time</div>
+                  <div class="skill-chip">Firebase FCM Push</div>
+                  <div class="skill-chip">Hangfire Background Jobs</div>
+                  <div class="skill-chip">Postman & Swagger / Scalar</div>
+                  <div class="skill-chip">Git & GitHub</div>
+                  <div class="skill-chip">AutoMapper & FluentValidation</div>
+                </div>
+              </div>
+
+              <!-- Skill Category 6 -->
+              <div class="skill-group glass-panel">
+                <h4><i class="fa-solid fa-vial-circle-check"></i> Testing & Quality</h4>
+                <div class="skill-chips">
+                  <div class="skill-chip">Unit Testing (xUnit / NUnit)</div>
+                  <div class="skill-chip">Integration Testing</div>
+                  <div class="skill-chip">Postman API Testing</div>
+                  <div class="skill-chip">TDD Fundamentals</div>
+                  <div class="skill-chip">Test Case Design</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="section contact-section">
+      <div class="section-container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">LET'S CONNECT</span>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">Interested in collaborating or discussing full-time opportunities? Send a message or reach out directly.</p>
+        </div>
+
+        <div class="contact-wrapper">
+          
+          <!-- Contact Details Cards -->
+          <div class="contact-cards-col">
+            
+            <a href="mailto:mo.sayed2037@gmail.com" class="contact-card glass-panel">
+              <div class="contact-icon cyan-glow">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-card-info">
+                <span class="card-label">Email Me</span>
+                <span class="card-value">mo.sayed2037@gmail.com</span>
+              </div>
+              <i class="fa-solid fa-arrow-right card-arrow"></i>
+            </a>
+
+            <a href="tel:+201029684685" class="contact-card glass-panel">
+              <div class="contact-icon emerald-glow">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="contact-card-info">
+                <span class="card-label">Call / WhatsApp</span>
+                <span class="card-value">+20 102 968 4685</span>
+              </div>
+              <i class="fa-solid fa-arrow-right card-arrow"></i>
+            </a>
+
+            <a href="https://github.com/MoSayed335" target="_blank" rel="noopener noreferrer" class="contact-card glass-panel">
+              <div class="contact-icon purple-glow">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="contact-card-info">
+                <span class="card-label">GitHub</span>
+                <span class="card-value">github.com/MoSayed335</span>
+              </div>
+              <i class="fa-solid fa-arrow-right card-arrow"></i>
+            </a>
+
+            <a href="https://linkedin.com/in/mo7amed-abdelkader" target="_blank" rel="noopener noreferrer" class="contact-card glass-panel">
+              <div class="contact-icon blue-glow">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+              <div class="contact-card-info">
+                <span class="card-label">LinkedIn</span>
+                <span class="card-value">linkedin.com/in/mo7amed-abdelkader</span>
+              </div>
+              <i class="fa-solid fa-arrow-right card-arrow"></i>
+            </a>
+
+            <div class="contact-card glass-panel static-card">
+              <div class="contact-icon gold-glow">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-card-info">
+                <span class="card-label">Location</span>
+                <span class="card-value">Cairo, Egypt (Open to Remote & Relocation)</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Interactive Glassmorphism Contact Form -->
+          <div class="contact-form-col glass-panel">
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-header">
+                <h3><i class="fa-solid fa-paper-plane"></i> Send Direct Message</h3>
+                <p>Feel free to reach out for projects, hiring, or technical inquiries.</p>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactName">Your Name</label>
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-user input-icon"></i>
+                    <input type="text" id="contactName" name="name" required placeholder="e.g. John Doe">
+                  </div>
+                  <span class="error-msg" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactEmail">Your Email</label>
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-envelope input-icon"></i>
+                    <input type="email" id="contactEmail" name="email" required placeholder="name@domain.com">
+                  </div>
+                  <span class="error-msg" id="emailError"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject">Subject</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-tag input-icon"></i>
+                  <input type="text" id="contactSubject" name="subject" required placeholder="Project Opportunity / Backend Consultation">
+                </div>
+                <span class="error-msg" id="subjectError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage">Message</label>
+                <div class="input-wrapper textarea-wrapper">
+                  <i class="fa-solid fa-comment-dots input-icon"></i>
+                  <textarea id="contactMessage" name="message" rows="5" required placeholder="Share project details, requirements, or greetings..."></textarea>
+                </div>
+                <span class="error-msg" id="messageError"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary submit-btn" id="contactSubmitBtn">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+
+              <div id="formFeedback" class="form-feedback"></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-text">Mo.Sayed</span>
+            <span class="logo-tag">.NET</span>
+            <span class="logo-bracket">/&gt;</span>
+          </a>
+          <p>Building high-performance, maintainable, and elegant backend software with modern .NET technologies.</p>
+        </div>
+
+        <div class="footer-links">
+          <span class="footer-links-title">Quick Navigation</span>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">GitHub Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#resume">CV / Resume</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-socials">
+          <span class="footer-links-title">Connect</span>
+          <div class="social-icons">
+            <a href="https://github.com/MoSayed335" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/mo7amed-abdelkader" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:mo.sayed2037@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="tel:+201029684685" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mohamed Sayed Abdelkader. All rights reserved. Crafted with clean architecture & glassmorphism.</p>
+        <button id="scrollToTopBtn" class="scroll-top-btn" title="Back to top" aria-label="Scroll back to top">
+          <i class="fa-solid fa-chevron-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== IMAGE MODAL / LIGHTBOX ==================== -->
+  <div id="imageLightboxModal" class="lightbox-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content-box">
+      <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close modal">&times;</button>
+      <div class="lightbox-image-container">
+        <img id="lightboxImage" src="" alt="Full view preview">
+      </div>
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
